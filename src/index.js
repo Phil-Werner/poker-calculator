@@ -4,7 +4,9 @@ import './index.css';
 //import App from './App';
 import club from './images/club.jpg';
 import back from './images/back.png';
-import kingClub from './images/kingClub.png';
+import aceclub from './images/aceclub.png';
+import kingclub from './images/kingclub.png';
+import queenclub from './images/queenclub.png';
 import * as serviceWorker from './serviceWorker';
 
 function Welcome(props) {
@@ -16,13 +18,25 @@ class BottomCard extends React.Component {
 
     if (!this.props.cardChosen) {
 
-      return <img src={back} />
+      return <img src={back} alt="back" />
     }
 
     else {
 
-      return <img src={kingClub} />
+      if (this.props.firstCard === "aceclub") {
+        return <img src={aceclub} alt="aceOfClubs" />
+      }
+
+      if (this.props.firstCard === "kingclub") {
+        return <img src={kingclub} alt="kingOfClubs" />
+      }
+
+      if (this.props.firstCard === "queenclub") {
+        return <img src={queenclub} alt="queenOfClubs" />
+      }
+
     }
+
   }
 }
 
@@ -33,16 +47,17 @@ class App extends Component {
     super(props);
     this.state = {
       firstCardChosen: false,
+      firstCard: '',
     };
 
     this.click = this.click.bind(this);
   }
 
-  click(event, rank, suit) {
+  click(event, card) {
     event.preventDefault();
-    console.log("You clicked on the",rank, "of", suit, "s");
+    console.log("You clicked on ", card);
 
-    this.setState({firstCardChosen: true});
+    this.setState({firstCardChosen: true, firstCard: card});
 
     console.log("The first card is chosen: ", this.state.firstCardChosen)
 
@@ -53,30 +68,25 @@ class App extends Component {
 
     return (
       <div>
-        <div>
-          <Welcome name="Sara" />
-          <Welcome name="Cahal" />
-          <Welcome name="Edite" />
-        </div>
         <div className="test">
           testtt!!!
         </div>
         <div className="top-card" id="ace-of-clubs" onClick={(e) => {
-          this.click(e, "A", "club")
+          this.click(e, "aceclub")
         }}>
           A<img src={club} alt="club" id="top-club" />
         </div>
         <div className="top-card" id="king-of-clubs" onClick={(e) => {
-          this.click(e, "K", "club")
+          this.click(e, "kingclub")
         }}>
           K<img src={club} alt="club" id="top-club" />
         </div>
         <div className="top-card" id="queen-of-clubs" onClick={(e) => {
-          this.click(e, "Q", "club")
+          this.click(e, "queenclub")
         }}>
           Q<img src={club} alt="club" id="top-club" />
         </div>
-        <BottomCard cardChosen={this.state.firstCardChosen} />
+        <BottomCard cardChosen={this.state.firstCardChosen} firstCard={this.state.firstCard} />
       </div>
     );
   }
