@@ -44,4 +44,21 @@ code {
   bottom: 45px;
 }
 
+#queen-of-clubs {
+  position: relative;
+  left: 139px;
+  bottom: 90px;
+}
+
+#jack-of-clubs {
+  position: relative;
+  left: 201px;
+  bottom: 135px;
+}
+
+#ten-of-clubs {
+  position: relative;
+  left: 263px;
+  bottom: 180px;
+}
 

@@ -9,9 +9,9 @@ import kingclub from './images/kingclub.png';
 import queenclub from './images/queenclub.png';
 import * as serviceWorker from './serviceWorker';
 
-function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
-}
+// function Welcome(props) {
+//   return <h1>Hello, {props.name}</h1>;
+// }
 
 class BottomCard extends React.Component {
   render() {
@@ -85,6 +85,16 @@ class App extends Component {
           this.click(e, "queenclub")
         }}>
           Q<img src={club} alt="club" id="top-club" />
+        </div>
+        <div className="top-card" id="jack-of-clubs" onClick={(e) => {
+          this.click(e, "jackclub")
+        }}>
+          J<img src={club} alt="club" id="top-club" />
+        </div>
+        <div className="top-card" id="ten-of-clubs" onClick={(e) => {
+          this.click(e, "tenclub")
+        }}>
+          T<img src={club} alt="club" id="top-club" />
         </div>
         <BottomCard cardChosen={this.state.firstCardChosen} firstCard={this.state.firstCard} />
       </div>
