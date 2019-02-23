@@ -40,25 +40,54 @@ code {
 
 #king-of-clubs {
   position: relative;
+  display: inline-block;
   left: 77px;
   bottom: 45px;
 }
 
 #queen-of-clubs {
   position: relative;
-  left: 139px;
-  bottom: 90px;
+  display: inline-block;
+  left: 77px;
+  bottom: 45px;
 }
 
 #jack-of-clubs {
   position: relative;
-  left: 201px;
-  bottom: 135px;
+  display: inline-block;
+  left: 77px;
+  bottom: 45px;
 }
 
 #ten-of-clubs {
   position: relative;
-  left: 263px;
-  bottom: 180px;
+  display: inline-block;
+  left: 77px;
+  bottom: 45px;
+}
+
+#nine-of-clubs {
+  position: relative;
+  display: inline-block;
+  left: 77px;
+  bottom: 45px;
+}
+
+#eight-of-clubs {
+  position: relative;
+  display: inline-block;
+  left: 77px;
+  bottom: 45px;
+}
+
+#seven-of-clubs {
+  position: relative;
+  display: inline-block;
+  left: 77px;
+  bottom: 45px;
+}
+
+#six-of-clubs {
+  position: relative;
 }
 

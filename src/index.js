@@ -96,6 +96,26 @@ class App extends Component {
         }}>
           T<img src={club} alt="club" id="top-club" />
         </div>
+        <div className="top-card" id="nine-of-clubs" onClick={(e) => {
+          this.click(e, "nineclub")
+        }}>
+          9<img src={club} alt="club" id="top-club" />
+        </div>
+        <div className="top-card" id="eight-of-clubs" onClick={(e) => {
+          this.click(e, "eightclub")
+        }}>
+          8<img src={club} alt="club" id="top-club" />
+        </div>
+        <div className="top-card" id="seven-of-clubs" onClick={(e) => {
+          this.click(e, "sevenclub")
+        }}>
+          7<img src={club} alt="club" id="top-club" />
+        </div>
+        <div className="top-card" id="six-of-clubs" onClick={(e) => {
+          this.click(e, "sixclub")
+        }}>
+          6<img src={club} alt="club" id="top-club" />
+        </div>
         <BottomCard cardChosen={this.state.firstCardChosen} firstCard={this.state.firstCard} />
       </div>
     );
